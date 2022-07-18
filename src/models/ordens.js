@@ -1,8 +1,7 @@
-const { DataTypes } = require("sequelize");
-const { time } = process.env;
+const { DataTypes } = require('sequelize')
 
-const Ordens = (sequelize) => {
-  const model = sequelize.define("ordens", {
+const Ordens = sequelize => {
+  const model = sequelize.define('ordens', {
     amount_total: {
       type: DataTypes.INTEGER,
       allowNull: false,
@@ -18,35 +17,16 @@ const Ordens = (sequelize) => {
     state: {
       type: DataTypes.STRING,
       allowNull: false,
-      defaultValue: "En proceso",
+      defaultValue: 'En proceso',
     },
     view: {
       type: DataTypes.INTEGER,
       allowNull: false,
       defaultValue: 1,
     },
-  });
+  })
 
-  const preStart = () => {
-    const json = require("../temporal-json/ordens.json");
+  return model
+}
 
-    json.forEach(async (value) => {
-      const { products, details, amount_total, price_total } = value;
-
-      const order = await model.create({
-        amount_total,
-        price_total,
-        details,
-      });
-
-      order.setUser(1);
-      order.setProducts(products);
-    });
-  };
-
-  setTimeout(preStart, time);
-
-  return model;
-};
-
-module.exports = Ordens;
+module.exports = Ordens

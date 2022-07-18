@@ -1,9 +1,8 @@
-const { DataTypes } = require("sequelize");
-const { time } = process.env;
+const { DataTypes } = require('sequelize')
 
-const Genders = (sequelize) => {
+const Genders = sequelize => {
   const model = sequelize.define(
-    "genders",
+    'genders',
     {
       name: {
         type: DataTypes.STRING,
@@ -15,25 +14,9 @@ const Genders = (sequelize) => {
       createdAt: false,
       updatedAt: false,
     }
-  );
+  )
 
-  const preStart = () => {
-    const json = require("../temporal-json/genders.json");
+  return model
+}
 
-    json.forEach(async (value) => {
-      const { name } = value;
-
-      await model.findOrCreate({
-        where: {
-          name,
-        },
-      });
-    });
-  };
-
-  setTimeout(preStart, time);
-
-  return model;
-};
-
-module.exports = Genders;
+module.exports = Genders

@@ -1,8 +1,8 @@
-const { DataTypes } = require("sequelize");
-const { time } = process.env;
-const Reviews = (sequelize) => {
+const { DataTypes } = require('sequelize')
+
+const Reviews = sequelize => {
   const model = sequelize.define(
-    "reviews",
+    'reviews',
     {
       comment: {
         type: DataTypes.TEXT,
@@ -16,39 +16,9 @@ const Reviews = (sequelize) => {
     {
       updateAt: false,
     }
-  );
+  )
 
-  const preStart = () => {
-    const json = require("../temporal-json/reviews.json");
+  return model
+}
 
-    const { modelProducts, modelReviews } = require("../db");
-
-    json.forEach(async (obj) => {
-      const review = await modelReviews.create({
-        comment: obj.comment,
-        rating: obj.rating,
-      });
-
-      await review.setUser(obj.userId);
-      await review.setProduct(obj.productId);
-
-      const product = await modelProducts.findByPk(obj.productId);
-
-      let reviews = await product.getReviews();
-      await modelProducts.update(
-        {
-          rating: (reviews.length * obj.rating * 5) / 100,
-        },
-        {
-          where: { id: obj.productId },
-        }
-      );
-    });
-  };
-
-  setTimeout(preStart, time);
-
-  return model;
-};
-
-module.exports = Reviews;
+module.exports = Reviews
