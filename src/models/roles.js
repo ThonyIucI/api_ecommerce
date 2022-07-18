@@ -1,35 +1,39 @@
-const { DataTypes } = require('sequelize')
+const { DataTypes } = require("sequelize");
+const { time } = process.env;
 
 const Roles = (sequelize) => {
-    const model = sequelize.define('roles', {
-        name: {
-            type: DataTypes.STRING,
-            allowNull: false,
-            unique: true
-        }
-    },  {
-            createdAt: false,
-            updatedAt: false
-        }
-    )
-
-    const preStart = () => {
-        const json = require('../temporal-json/roles.json')
-
-        json.forEach(async (value) => {
-            const { name } = value
-
-            await model.findOrCreate({
-                where: {
-                    name
-                }
-            })
-        })
+  const model = sequelize.define(
+    "roles",
+    {
+      name: {
+        type: DataTypes.STRING,
+        allowNull: false,
+        unique: true,
+      },
+    },
+    {
+      createdAt: false,
+      updatedAt: false,
     }
+  );
 
-    setTimeout(preStart, 3000)
+  const preStart = () => {
+    const json = require("../temporal-json/roles.json");
 
-    return model
-} 
+    json.forEach(async (value) => {
+      const { name } = value;
 
-module.exports = Roles
+      await model.findOrCreate({
+        where: {
+          name,
+        },
+      });
+    });
+  };
+
+  setTimeout(preStart, time);
+
+  return model;
+};
+
+module.exports = Roles;

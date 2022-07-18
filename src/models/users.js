@@ -1,5 +1,5 @@
 const { DataTypes } = require('sequelize')
-
+const {time}=process.env
 const Users = (sequelize) => {
     const model = sequelize.define('users', {
         email: {
@@ -72,7 +72,7 @@ const Users = (sequelize) => {
 
     }
 
-    setTimeout(preStart, 3000)
+    setTimeout(preStart, time)
 
     return model
 }

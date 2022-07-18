@@ -1,4 +1,5 @@
 const { DataTypes } = require('sequelize');
+const { time } = process.env;
 
 const Products = (sequelize)=>{
   const model = sequelize.define('products', {
@@ -124,7 +125,7 @@ const Products = (sequelize)=>{
     })
   }
 
-  setTimeout(preStart, 6000)
+  setTimeout(preStart, time)
 
   return model
 };
