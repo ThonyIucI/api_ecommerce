@@ -1,0 +1,58 @@
+[
+    {
+        "id": 1,
+        "name": "Black"
+    },
+    {
+        "id": 2,
+        "name": "White"
+    },
+    {
+        "id": 3,
+        "name": "Red"
+    },
+    {
+        "id": 4,
+        "name": "Blue"
+    },
+    {
+        "id": 5,
+        "name": "Green"
+    },
+    {
+        "id": 6,
+        "name": "Yellow"
+    },
+    {
+        "id": 7,
+        "name": "Pink"
+    },
+    {
+        "id": 8,
+        "name": "Brown"
+    },
+    {
+        "id": 9,
+        "name": "Purple"
+    },
+    {
+        "id": 10,
+        "name": "Cream"
+    },
+    {
+        "id": 11,
+        "name": "Multi-Color"
+    },
+    {
+        "id": 12,
+        "name": "Orange"
+    },
+    {
+        "id": 13,
+        "name": "Tan"
+    },
+    {
+        "id": 14,
+        "name": "Grey"
+    }
+]

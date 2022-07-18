@@ -1,0 +1,38 @@
+[
+    {
+        "userId": 1,
+        "productId": 1,
+        "comment": "Hola perros",
+        "rating": 3
+    },
+    {
+        "userId": 1,
+        "productId": 3,
+        "comment": "Hola perros",
+        "rating": 3
+    },
+    {
+        "userId": 1,
+        "productId": 1,
+        "comment": "Hola perros",
+        "rating": 3
+    },
+    {
+        "userId": 2,
+        "productId": 3,
+        "comment": "Hola perros",
+        "rating": 3
+    },
+    {
+        "userId": 2,
+        "productId": 4,
+        "comment": "Hola perros",
+        "rating": 3
+    },
+    {
+        "userId": 2,
+        "productId": 1,
+        "comment": "Hola perros",
+        "rating": 3
+    }
+]

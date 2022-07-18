@@ -1,0 +1,30 @@
+[
+    {
+        "dni": 12346,
+        "username": "ADMIN",
+        "password": "1234",
+        "name": "AD",
+        "lastname": "MIN",
+        "genre":"Men",
+        "email":"admin@admin.com",
+        "phone":60,
+        "adress":"Calle Siempre Alegre",
+        "country":"Colombia",
+        "avatar_url": "https://flyclipart.com/thumbs/bull-sticker-bull-ox-photo-editing-1092606.png",
+        "rol": 1
+    },
+    {   
+        "dni": 27654,
+        "username": "Maria_smith",
+        "password": "4321",
+        "name": "Maria Smith" ,
+        "lastName": "Smith",
+        "genre":"Women",
+        "email":"Maria@example.com",
+        "phone":50,
+        "adress":"Calle Siempre Viva",
+        "country":"Argentina",
+        "avatar_url": "https://www.pngall.com/wp-content/uploads/12/Avatar-Profile-Vector-PNG-File.png",
+        "rol": 2
+    }
+]

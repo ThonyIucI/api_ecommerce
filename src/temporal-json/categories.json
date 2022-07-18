@@ -1,0 +1,22 @@
+[
+  {
+    "id": 1,
+    "name": "Basketball"
+  },
+  {
+    "id": 2,
+    "name": "Lifestyle"
+  },
+  {
+    "id": 3,
+    "name": "Other"
+  },
+  {
+    "id": 4,
+    "name": "Running"
+  },
+  {
+    "id": 5,
+    "name": "Skateboarding"
+  }
+]
