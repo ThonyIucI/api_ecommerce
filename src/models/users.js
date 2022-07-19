@@ -43,10 +43,6 @@ const Users = sequelize => {
         type: DataTypes.STRING,
         allowNull: false,
       },
-    },
-    {
-      createdAt: false,
-      updatedAt: false,
     }
   )
 
